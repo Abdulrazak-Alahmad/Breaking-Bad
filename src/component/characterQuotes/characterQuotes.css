@@ -1,0 +1,37 @@
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  border-radius: 2rem;
+}
+
+.singleQuote {
+  border-radius: 5px;
+  background-color: rgb(247, 244, 239);
+  border: 1px solid rgb(212, 181, 122);
+  max-width: 500px;
+  height: 50px;
+  padding-left: 3px;
+}
+
+.singleQuote:hover {
+  background-color: wheat;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .quotes {
+    grid-template-columns: 1fr;
+    margin: 10px 0;
+    gap: 10px;
+
+  }
+
+  .singleQuote {
+    min-height: 50px;
+    height: inherit;
+  }
+}

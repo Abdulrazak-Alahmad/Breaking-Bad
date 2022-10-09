@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  border-bottom: 1px solid rgb(212, 181, 122);
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(247, 244, 239);
+}
+
+.header:hover {
+  background: transparent;
+  background-color: wheat;
+}
+
+.header--nav {
+  margin-top: 33px;
+}
+
+.nav-link {
+  margin: 0px 5px;
+  text-decoration: none;
+  color: #8E3200;
+}
+
+h1 {
+  color: #8E3200;
+}
