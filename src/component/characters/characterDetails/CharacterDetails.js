@@ -9,20 +9,22 @@ import './characterDetails.css'
 export default function CharacterDetails() {
     const { characterId } = useParams()
     const character = useFetch(`/api/characters/${characterId}`, [characterId])
-    const { lydiaImage, hollyImage,navigate } = useContext(Context)
+    const { lydiaImage, hollyImage, navigate } = useContext(Context)
     return (
         character.error
             ?
             <h1>Something went wrong.</h1>
             :
             character.isLoading ?
-                <RotatingLines
-                    strokeColor="grey"
-                    strokeWidth="5"
-                    animationDuration="0.75"
-                    width="66"
-                    visible={true}
-                />
+                <div className='loading'>
+                    <RotatingLines
+                        strokeColor="grey"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="66"
+                        visible={true}
+                    />
+                </div>
                 :
                 <div className='container'>
                     <Header />
@@ -30,7 +32,7 @@ export default function CharacterDetails() {
                         <>
                             <button onClick={() => navigate(-1)}>Go back</button>
                             <div className=' imageCharacter'>
-                            <h3>{character.data[0].name}</h3>
+                                <h3>{character.data[0].name}</h3>
                                 <img className='image' src={ // change links that do not work well,No images
                                     character.data[0].img === `https://media1.popsugar-assets.com/files/thumbor/wERDST0TUb-iHCSb2r5ZpsvaZLo/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2013/07/17/675/n/1922283/fae2f583f04bb80f_Laura-Fraser-is-back-as-Lydia-Rodarte-Quayle_gallery_primary/i/Laura-Fraser-Lydia-Rodarte-Quayle.jpg`
                                         ?

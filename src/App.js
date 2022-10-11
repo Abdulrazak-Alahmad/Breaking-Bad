@@ -5,6 +5,7 @@ import CharacterDetails from './component/characters/characterDetails/CharacterD
 import { ContextProvider } from './context/Context'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CharacterQoutes from './component/characterQuotes/CharacterQuotes';
+import './App.css'
 function App() {
   return (
     <Router>

@@ -18,13 +18,15 @@ export default function Favourites() {
                     <h1>Something went wrong.</h1>
                     :
                     isLoading ?
-                        <RotatingLines
-                            strokeColor="grey"
-                            strokeWidth="5"
-                            animationDuration="0.75"
-                            width="66"
-                            visible={true}
-                        />
+                        <div className='loading'>
+                            <RotatingLines
+                                strokeColor="grey"
+                                strokeWidth="5"
+                                animationDuration="0.75"
+                                width="66"
+                                visible={true}
+                            />
+                        </div>
                         :
                         <>
                             {
