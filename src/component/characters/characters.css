@@ -7,18 +7,16 @@
 
 .character_item_info {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
     justify-content: space-around;
 }
 
 .character__item {
-    padding: 1.3rem;
+    padding: 20px;
     border: 1px solid transparent;
-    border-radius: 2rem;
+    border-radius: 8%;
     transition: all 400ms ease;
     text-align: center;
-    margin: 5px 0;
+    margin: 5px 0px;
     background-color: rgb(247, 244, 239);
 }
 
@@ -35,10 +33,6 @@
 button {
     border: none;
     background: none;
-}
-
-.character--image {
-    grid-area: imageUp;
 }
 
 .image {
