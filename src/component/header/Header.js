@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './header.css'
-export default function Header({ title }) {
+export default function Header() {
     return (
         <div className='header'>
             <div>
-                <h1>{title}</h1>
+                <Link className='headerLogo' to="/"><h1 >Breaking Bad</h1></Link>
             </div>
-            <div className='header--nav'>
-                <Link className='nav-link' to="/">Characterss</Link>
-                <Link className='nav-link' to="/favourites">Favourites</Link>
+            <div className='headerNav'>
+                <Link className='navFavourites' to="/favourites">Favourites</Link>
             </div>
         </div>
     )

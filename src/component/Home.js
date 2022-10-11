@@ -4,11 +4,11 @@ import Header from './header/Header'
 import Footer from './footer/Footer'
 import useFetch from '../useFetch/useFetch'
 import { RotatingLines } from 'react-loader-spinner'
-export default function Home({ title }) {
+export default function Home() {
     const characters = useFetch('/api/characters', [])
     return (
         <div>
-            <Header title={title} />
+            <Header />
             {
                 characters.error
                     ?

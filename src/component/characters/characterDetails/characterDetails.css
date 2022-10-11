@@ -7,9 +7,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  padding-top: 20px;
 }
 
-.link {
+.link,
+button {
   margin: 0px 5px;
   text-decoration: none;
   color: #662503;
@@ -26,6 +28,20 @@
 .characterDetailsInfoChild:hover {
   background: transparent;
   background-color: wheat;
+}
+
+h3 {
+  color: #662503;
+}
+
+.container {
+  position: relative;
+}
+
+.container button {
+  padding-top: 10px;
+  position: absolute;
+  cursor: pointer
 }
 
 @media only screen and (max-width: 1000px) {

@@ -20,7 +20,6 @@ export default function useFetch(url, condition) {
             }
         };
         fetchData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, condition)
 
     return { data, isLoading, error };

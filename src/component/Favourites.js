@@ -1,17 +1,18 @@
 import React, { useContext } from 'react'
-import { FavouritesContext } from '../context/ContextFavourite'
+import { Context } from '../context/Context'
+import { RotatingLines } from 'react-loader-spinner'
 import Characters from './characters/Characters'
 import Header from './header/Header'
 import Footer from './footer/Footer'
 import useFetchUrlsFavourites from '../useFetch/useFetchUrlsFavourites'
-import { RotatingLines } from 'react-loader-spinner'
-export default function Favourites({ title }) {
-    const { urlsFavourites } = useContext(FavouritesContext)
+
+export default function Favourites() {
+    const { urlsFavourites } = useContext(Context)
     const { data, isLoading, error } = useFetchUrlsFavourites(urlsFavourites)
 
     return (
         <div>
-            <Header title={title} />
+            <Header />
             {
                 error ?
                     <h1>Something went wrong.</h1>

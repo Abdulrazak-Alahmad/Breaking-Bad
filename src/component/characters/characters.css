@@ -55,6 +55,11 @@ img {
     object-fit: contain;
 }
 
+button {
+    font-size: 25px;
+    cursor: pointer
+}
+
 @media only screen and (max-width: 1600px) {
     .cards {
         grid-template-columns: 1fr 1fr 1fr;
